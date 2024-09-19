@@ -1,0 +1,77 @@
+/* the styles for the HTML elements */
+
+/* first element selector */
+
+
+header {
+    /* property/value pair */
+    background-color:#bfbff1; 
+    color: #1c1c70;
+
+    /* I am playing around with different properties */
+    height:auto;
+    width:auto;
+    margin:auto;
+
+    float:center;
+    clear:both;
+
+}
+
+/* second element selector etc */
+nav {
+    background-color:#bfbff1;
+    color: #1c1c70;
+    width:auto;
+    height:auto;
+    margin:auto;
+
+}
+
+body {
+    background-color:#bfbff1;
+}
+
+main {
+    background-color:#bfbff1;
+    color: #1c1c70;
+
+    height:auto;
+    width:auto;
+    margin:auto;
+}
+
+footer {
+    background-color:#bfbff1;
+    color: #1c1c70;
+    
+    float:left;
+    clear:both;
+
+    height:auto;
+    width:auto;
+    margin:auto;
+}
+
+header h2 {
+    text-align: center;
+    margin:auto;
+    /* color: #1c1c70; */
+}
+
+button {
+    margin-top: 0.5rem;
+    padding: 15px;
+    background: #530753;
+    color: white;
+    border: none;
+    border-radius: 5%;
+    transition: all linear 0.5s;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: translate(0px, -5px);
+}
+
+
