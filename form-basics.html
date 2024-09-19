@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Your first HTML form, styled</title>
+		<style>
+			form {
+				/* Just to center the form on the page */
+				margin: 0 auto;
+				width: 400px;
+				/* To see the outline of the form */
+				padding: 1em;
+				border: 1px solid #ccc;
+				border-radius: 1em;
+			}
+
+			ul {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+
+			form li + li {
+				margin-top: 1em;
+			}
+
+			label {
+				/* To make sure that all labels have the same size and are properly aligned */
+				display: inline-block;
+				width: 90px;
+				text-align: right;
+			}
+
+			input,
+			textarea {
+				/* To make sure that all text fields have the same font settings By default, textareas have a monospace font */
+				font: 1em sans-serif;
+				/* To give the same size to all text fields */
+				width: 300px;
+				box-sizing: border-box; /* To harmonize the look & feel of text field border */
+				border: 1px solid #999;
+			}
+
+			input:focus,
+			textarea:focus {
+				/* To give a little highlight on active elements */
+				border-color: #000;
+			}
+
+			/* To show a green border when valid input is entered */
+			input:required:valid { border: 3px solid #0f0;}
+
+			textarea:required:valid { border: 3px solid #0f0;}
+
+			textarea {
+				/* To properly align multiline text fields with their labels */
+				vertical-align: top;
+				/* To give enough room to type some text */
+				height: 5em;
+			}
+
+			.button {
+				/* To position the buttons to the same position of the text fields */
+				padding-left: 90px;
+				/* same size as the label elements */
+			}
+
+			button {
+				/* This extra margin represent roughly the same space as the space between the labels and their text fields */
+				margin-left: 0.5em;
+			}
+		</style>
+	</head>
+
+	<body>
+		<form  method="post">
+			<ul>
+				<li>
+					<label for="name">Name:</label>
+					<input type="text" id="name" name="user_name" required/>
+				</li>
+				<li>
+					<label for="mail">E-mail:</label>
+					<input type="email" id="mail" name="user_mail" required/>
+				</li>
+				<li>
+					<label for="phone">Phone:<br><small>###-###-####</small> </label>
+					<input type="tel" id="phone" name="user_tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required/>
+				</li>
+				<li>
+					<label for="msg">Message:</label>
+					<textarea id="msg" name="user_message" required></textarea>
+				</li>
+
+				<li class="button">
+					<button type="submit">Send your message</button>
+				</li>
+
+
+
+				<!--this paragraph is to separate the two items, 
+				I couldn't figure out why they were right on top of one another-->
+				<p></p> 
+				<!--I went ahead and used fieldset element because it came out looking nicer, also trying to get the 
+				radio buttons lined up with their labels. Email is the default contact method-->
+				<fieldset>
+					<legend>Preferred Contact Method:</legend>
+				<div>
+					<input type="radio" id="contactChoice1" name="contactType" value="email" checked />
+					<label for="contactChoice1">Email</label>
+				
+					<input type="radio" id="contactChoice2" name="contactType" value="phone" />
+					<label for="contactChoice2">Phone</label>
+				
+					<input type="radio" id="contactChoice3" name="contactType" value="text" />
+					<label for="contactChoice3">Text</label>
+				
+					<input type="radio" id="contactChoice4" name="contactType" value="mail" />
+					<label for="contactChoice4">Snail Mail</label>
+				</div>
+
+				</fieldset>	
+			
+			</ul>
+		</form>
+	</body>
+</html>
