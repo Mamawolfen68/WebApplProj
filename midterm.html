@@ -7,9 +7,14 @@
             text-align: center;
             font-weight: bold;
             color: black;
-            font-size: 175%;
+            font-size: 200%;
         }
 
+        body {
+         
+            display: block;
+            margin: 8px;
+        }
         form {
             /* Just to center the form on the page */
             margin: 0 auto;
@@ -22,12 +27,7 @@
 
         ul {
             list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        form li + li {
-            margin-top: 1em;
+            
         }
 
         label {
@@ -44,13 +44,13 @@
             /* To give the same size to all text fields */
             width: 300px;
             box-sizing: border-box; /* To harmonize the look & feel of text field border */
-            border: 1px solid #0b0b0b;
+            border: 1px solid black;
         }
 
         input:focus,
         textarea:focus {
             /* To give a little highlight on active elements */
-            border-color: black;
+            border-color: #0a0909;
         }
 
          /* To show a red border when input is required */
@@ -69,8 +69,7 @@
         textarea:required:valid { border: 3px solid #0f0;}
 
         textarea {
-            /* To properly align multiline text fields with their labels */
-            vertical-align: top;
+        
             /* To give enough room to type some text */
             height: 5em;
         }
@@ -83,7 +82,7 @@
 
         button {
             /* This extra margin represent roughly the same space as the space between the labels and their text fields */
-            margin-left: 4.5em;
+            margin-left: -.5em;
         }
         
         footer {
@@ -97,7 +96,8 @@
 <main>
 <body>
     <header><h1>CIS 1715 Midterm</h1></header>
-    <form>
+    <!--this takes the action of sending the user to the success page when they click the submit button-->
+    <form id="UserInfo" action="midterm2.html" target="_blank">
         <ul>
             <li>
                 <label for="firstname">First Name:</label>
@@ -119,11 +119,10 @@
                 <label for="msg">Comment:</label>
                 <textarea id="msg" name="user_comment" required></textarea>
             </li>
-
             <li class="button">
-                <button type="submit"><a href="midterm2.html" target="_blank">Send your message</a></button>
-            </li>   
-        </ul>
+                <button type="submit">Send your message</button>
+            </li>  
+        </ul>     
     </form>
 </body>
 </main>
